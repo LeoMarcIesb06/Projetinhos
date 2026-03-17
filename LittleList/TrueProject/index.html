@@ -1,56 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tarefas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- //////////////////cabecalho////////////////////////////// -->
-
+  <body>
+    <!-- HEADER -->
     <header class="header">
-    <nav class="nav">
-<!-- criou o novo div logo-area pra logo inteira -->
-        <div class="logo-area">  
-            <div class="logo">
-                <h1 class="tf">TF</h1>
-            </div>
-            <h2 class="name-logo">Name</h2>
+      <nav class="nav">
+        <div class="logo-area">
+          <div class="logo">TF</div>
+          <h1 class="name-logo">TaskFlow</h1>
         </div>
 
-        <div class="perfil"></div>
+        <div class="perfil">
+          <img src="img/user.png" alt="Perfil" />
+        </div>
+      </nav>
 
-    </nav>
+      <div class="linha"></div>
+    </header>
 
-    <div class="linha"></div>
-</header>
+    <!-- MAIN -->
+    <main class="container">
+      <!-- SEÇÃO DE BOAS VINDAS -->
+      <section class="welcome">
+        <div class="welcome-content">
+          <h2 class="welcome-title">Organize suas tarefas com facilidade</h2>
 
-<!-- //////////////////////////// primeira section  ////////////////////////// -->
-    <main>
-        <section class="introducao">
-            <div>
-                <h1 class="texto-inicial"></h1>
-                <button></button>
+          <p class="welcome-text">
+            Crie tarefas, acompanhe seu progresso e mantenha sua produtividade.
+          </p>
+
+          <button class="btn-primary">Criar nova tarefa</button>
+        </div>
+      </section>
+
+      <!-- DASHBOARD -->
+      <section class="dashboard">
+        <!-- CARD LISTA DE TAREFAS -->
+        <div class="card tarefas">
+          <h3>Minhas tarefas</h3>
+
+          <ul class="lista-tarefas">
+            <li class="tarefa">
+              <span class="tarefa-nome">Estudar JavaScript</span>
+
+              <div class="tarefa-recompensa">
+                <span class="trofeu">🏆</span>
+                <span class="xp">50 XP</span>
+              </div>
+            </li>
+
+            <li class="tarefa">
+              <span class="tarefa-nome">Estudar GitHub</span>
+
+              <div class="tarefa-recompensa">
+                <span class="trofeu">🏆</span>
+                <span class="xp">40 XP</span>
+              </div>
+            </li>
+
+            <li class="tarefa">
+              <span class="tarefa-nome">Estudar Inglês</span>
+
+              <div class="tarefa-recompensa">
+                <span class="trofeu">🏆</span>
+                <span class="xp">30 XP</span>
+              </div>
+            </li>
+          </ul>
+
+          <button class="btn-add">+ Adicionar tarefa</button>
+        </div>
+
+        <!-- CARD ESTATÍSTICAS -->
+        <div class="card estatisticas">
+          <h3>Progresso</h3>
+
+          <div class="grafico">
+            <!-- gráfico depois com JS ou CSS -->
+            <div class="circle-chart"></div>
+          </div>
+
+          <div class="legenda">
+            <div class="item">
+              <span class="cor vermelho"></span>
+              <p>Não iniciadas</p>
             </div>
-        </section>
 
-<!-- //////////////////////////// segunda section //////////////////////////////// -->
-        <section>
-            <div>
-             <input type="button" value="">
+            <div class="item">
+              <span class="cor amarelo"></span>
+              <p>Em progresso</p>
             </div>
-            <div>
-                
+
+            <div class="item">
+              <span class="cor verde"></span>
+              <p>Concluídas</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
 
-
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
